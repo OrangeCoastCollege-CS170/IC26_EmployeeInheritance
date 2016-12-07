@@ -12,16 +12,14 @@ public class Doctor extends Employee {
 
 	public Doctor(String name, double annualSalary, int yearHired, String id,
 			String specialty, double officeFee) {
-		super("Dr.", name, yearHired, id);
-		setAnnualSalary(annualSalary);
+		super("Dr.", name, annualSalary, yearHired, id);
 		mSpecialty = specialty;
 		mOfficeFee = officeFee;
 	}
 
 	public Doctor(Doctor other) {
-		super(other.getHonorific(), other.getName(), other.getYearHired(),
-				other.getIDNumber());
-		setAnnualSalary(other.getAnnualSalary());
+		super(other.mHonorific, other.mName, other.mAnnualSalary,
+				other.mYearHired, other.mIDNumber);
 		mSpecialty = other.mSpecialty;
 		mOfficeFee = other.mOfficeFee;
 	}

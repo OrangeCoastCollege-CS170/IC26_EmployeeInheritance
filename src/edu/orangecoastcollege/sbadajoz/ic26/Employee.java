@@ -11,23 +11,22 @@ public class Employee extends Person {
 	protected int mYearHired;
 	protected String mIDNumber;
 
-	public Employee(String honorific, String name, int yearHired, String id) {
+	public Employee(String honorific, String name, double AnnualSalary,
+			int yearHired, String id) {
 		super(honorific, name);
+		mAnnualSalary = AnnualSalary;
 		mYearHired = yearHired;
 		mIDNumber = id;
 	}
 
-	public Employee(String name, int yearHired, String id) {
-		super("", name);
-		mYearHired = yearHired;
-		mIDNumber = id;
+	public Employee(String name, double annualSalary, int yearHired,
+			String id) {
+		this("", name, annualSalary, yearHired, id);
 	}
 
 	public Employee(Employee other) {
-		super(other.getHonorific(), other.getName());
-		mAnnualSalary = other.mAnnualSalary;
-		mYearHired = other.mYearHired;
-		mIDNumber = other.mIDNumber;
+		this(other.mHonorific, other.mName, other.mAnnualSalary,
+				other.mYearHired, other.mIDNumber);
 	}
 
 	public double getAnnualSalary() {
