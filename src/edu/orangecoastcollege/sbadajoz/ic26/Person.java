@@ -8,66 +8,57 @@ IC26
 */
 public class Person {
 
-	private String honorific;
-	private String name;
-	
-	public Person()
-	{
-		this.honorific ="";
-		this.name = "";
-	}
-	
-	public Person(String honorific, String name)
-	{
-		this.honorific = honorific;
-		this.name = name;
+	private String mHonorific;
+	private String mName;
+
+	public Person() {
+		this.mHonorific = "";
+		this.mName = "";
 	}
 
-	public String getHonorific()
-	{
-		return this.honorific;
+	public Person(String honorific, String name) {
+		this.mHonorific = honorific;
+		this.mName = name;
 	}
-	
-	public String getName()
-	{
-		return this.name;
+
+	public String getHonorific() {
+		return this.mHonorific;
 	}
-	
-	// Gets the full name with honorific prefix in front (e.g. Ms. Smart Student)
-	public String getFullName()
-	{
-		if (this.honorific.equals(""))
-			return this.name;
+
+	public String getName() {
+		return this.mName;
+	}
+
+	// Gets the full name with honorific prefix in front (e.g. Ms. Smart
+	// Student)
+	public String getFullName() {
+		if (this.mHonorific.equals(""))
+			return this.mName;
 		else
-			return this.honorific + " " + this.name;
+			return this.mHonorific + " " + this.mName;
 	}
-	
-	public void setHonorific(String newHonorific)
-	{
-		this.honorific = newHonorific;
+
+	public void setHonorific(String newHonorific) {
+		this.mHonorific = newHonorific;
 	}
-	
-	public void setName(String newName)
-	{
-		this.name = newName;
+
+	public void setName(String newName) {
+		this.mName = newName;
 	}
 
 	@Override
 	public boolean equals(Object obj) {
 		if (obj == null || !(obj instanceof Person))
 			return false;
-		
+
 		Person otherPerson = (Person) obj;
-		return this.honorific.equals(otherPerson.honorific) && this.name.equals(otherPerson.name);
+		return this.mHonorific.equals(otherPerson.mHonorific)
+				&& this.mName.equals(otherPerson.mName);
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Person [" + this.getFullName() + "]";
 	}
 
-
-
-	
-	
 }

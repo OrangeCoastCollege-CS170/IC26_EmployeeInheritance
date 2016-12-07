@@ -6,23 +6,23 @@ December 7, 2016
 
 IC26
 */
-public class Employee extends Person{
+public class Employee extends Person {
 	private double mAnnualSalary;
 	private int mYearHired;
 	private String mIDNumber;
-	
+
 	public Employee(String honorific, String name, int yearHired, String id) {
 		super(honorific, name);
 		mYearHired = yearHired;
 		mIDNumber = id;
 	}
-	
-	public Employee( String name, int yearHired, String id) {
+
+	public Employee(String name, int yearHired, String id) {
 		super("", name);
 		mYearHired = yearHired;
 		mIDNumber = id;
 	}
-	
+
 	public Employee(Employee other) {
 		super(other.getHonorific(), other.getName());
 		mAnnualSalary = other.mAnnualSalary;
@@ -50,12 +50,11 @@ public class Employee extends Person{
 		this.mYearHired = yearHired;
 	}
 
-	
-
 	@Override
 	public String toString() {
-		return "Employee [" + super.toString() + ", mAnnualSalary=" + mAnnualSalary + ", mYearHired="
-				+ mYearHired + ", mIDNumber=" + mIDNumber + "]";
+		return "Employee [" + super.toString() + ", mAnnualSalary="
+				+ mAnnualSalary + ", mYearHired=" + mYearHired + ", mIDNumber="
+				+ mIDNumber + "]";
 	}
 
 	@Override
@@ -92,7 +91,5 @@ public class Employee extends Person{
 			return false;
 		return true;
 	}
-	
-	
-	
+
 }
