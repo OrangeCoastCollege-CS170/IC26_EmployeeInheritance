@@ -7,9 +7,9 @@ December 7, 2016
 IC26
 */
 public class Employee extends Person {
-	private double mAnnualSalary;
-	private int mYearHired;
-	private String mIDNumber;
+	protected double mAnnualSalary;
+	protected int mYearHired;
+	protected String mIDNumber;
 
 	public Employee(String honorific, String name, int yearHired, String id) {
 		super(honorific, name);

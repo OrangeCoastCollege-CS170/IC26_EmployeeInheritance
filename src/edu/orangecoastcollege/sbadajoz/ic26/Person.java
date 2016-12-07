@@ -8,8 +8,8 @@ IC26
 */
 public class Person {
 
-	private String mHonorific;
-	private String mName;
+	protected String mHonorific;
+	protected String mName;
 
 	public Person() {
 		this.mHonorific = "";
