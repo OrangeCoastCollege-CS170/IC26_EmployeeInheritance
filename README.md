@@ -16,6 +16,7 @@ The Doctor should have 2 constructors:
 
 1. Parameterized constructor (name, annualSalary, yearHired, id, specialty, officeFee)
 2. Copy constructor
+
 Give your class a reasonable set of accessors and mutators, as well as an equals( ) and toString( ) method.
 
 Below is an inheritance diagram in UML (Unified Modeling Language) of the three classes:
