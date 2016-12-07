@@ -20,4 +20,4 @@ Give your class a reasonable set of accessors and mutators, as well as an equals
 
 Below is an inheritance diagram in UML (Unified Modeling Language) of the three classes:
 
-![person inheritance](IC26_EmployeeInheritance/images/PersonInheritance.png "person inheritance")
+![person inheritance](https://www.github.com/S33V/IC26_EmployeeInheritance/images/PersonInheritance.png "person inheritance")
